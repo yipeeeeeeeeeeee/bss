@@ -17,3 +17,5 @@ Create an `images` folder and place the image files referenced by the HTML in it
 
 ## Notes
 Some game information is placeholder text or starter values and should be verified before submission.
+
+https://yipeeeeeeeeeeee.github.io/bss/
