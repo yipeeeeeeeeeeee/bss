@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bee Swarm Guide - Fields</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="nav-card">Home</a>
+        <a href="bees.html" class="nav-card">Bees</a>
+        <a href="tools.html" class="nav-card">Tools</a>
+        <a href="mobs.html" class="nav-card">Mobs</a>
+        <a href="fields.html" class="nav-card">Fields</a>
+    </nav>
+
+    <main>
+        <h1>Fields</h1>
+        <p>Select a field to view its information.</p>
+
+        <div class="field-tabs" role="tablist" aria-label="Fields">
+            <button type="button" class="field-tab active" data-field="dandelion" role="tab" aria-selected="true">Dandelion</button>
+            <button type="button" class="field-tab" data-field="sunflower" role="tab" aria-selected="false">Sunflower</button>
+            <button type="button" class="field-tab" data-field="mushroom" role="tab" aria-selected="false">Mushroom</button>
+        </div>
+
+        <section class="field-content" id="dandelion">
+            <div class="field-layout">
+                <div class="field-description">
+                    <h2>Dandelion Field</h2>
+                    <p>The Dandelion Field is one of the starting fields available to players.</p>
+                    <h3>Item Drops</h3>
+                    <ul>
+                        <li>Treat</li>
+                        <li>Glue</li>
+                        <li>Magic Bean</li>
+                        <li>Glitter</li>
+                    </ul>
+                    <h3>Bee Preferences</h3>
+                    <p>Add the bees that like and dislike this field after checking the game reference.</p>
+                </div>
+                <aside class="field-stats">
+                    <h2>Dandelion Field</h2>
+                    <img src="images/Dandelion_Field.webp" alt="Dandelion Field">
+                    <h4>Field Color</h4><p>White</p>
+                    <h4>Bee Prerequisites</h4><p>None</p>
+                    <h4>Field Dimensions</h4><p>18 × 36 flowers</p>
+                    <h4>Flower Count</h4><p>648</p>
+                </aside>
+            </div>
+        </section>
+
+        <section class="field-content" id="sunflower" hidden>
+            <div class="field-layout">
+                <div class="field-description">
+                    <h2>Sunflower Field</h2>
+                    <p>Add the Sunflower Field description here.</p>
+                    <h3>Item Drops</h3><p>Add verified item drops here.</p>
+                    <h3>Bee Preferences</h3><p>Add verified bee preferences here.</p>
+                </div>
+                <aside class="field-stats">
+                    <h2>Sunflower Field</h2>
+                    <img src="images/Sunflower_Field.webp" alt="Sunflower Field">
+                    <h4>Field Color</h4><p>White</p>
+                    <h4>Bee Prerequisites</h4><p>None</p>
+                    <h4>Field Dimensions</h4><p>Add dimensions</p>
+                    <h4>Flower Count</h4><p>Add flower count</p>
+                </aside>
+            </div>
+        </section>
+
+        <section class="field-content" id="mushroom" hidden>
+            <div class="field-layout">
+                <div class="field-description">
+                    <h2>Mushroom Field</h2>
+                    <p>Add the Mushroom Field description here.</p>
+                    <h3>Item Drops</h3><p>Add verified item drops here.</p>
+                    <h3>Bee Preferences</h3><p>Add verified bee preferences here.</p>
+                </div>
+                <aside class="field-stats">
+                    <h2>Mushroom Field</h2>
+                    <img src="images/Mushroom_Field.webp" alt="Mushroom Field">
+                    <h4>Field Color</h4><p>Red</p>
+                    <h4>Bee Prerequisites</h4><p>None</p>
+                    <h4>Field Dimensions</h4><p>Add dimensions</p>
+                    <h4>Flower Count</h4><p>Add flower count</p>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,373 @@
+body {
+    background-color: #182336;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+a {
+    color: #4da6ff;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #99ccff;
+}
+
+nav {
+    background-color: #101827;
+    padding: 15px;
+    text-align: center;
+}
+
+.nav-card {
+    display: inline-block;
+    background-color: #24334d;
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 8px;
+    margin: 3px;
+    text-decoration: none;
+}
+
+.nav-card:hover {
+    background-color: #354c6d;
+    color: #ffffff;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 24px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.intro,
+.instruction {
+    text-align: center;
+}
+
+.home-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.card {
+    display: block;
+    background-color: #24334d;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.card:hover {
+    color: #ffffff;
+    background-color: #2d4160;
+    transform: translateY(-4px);
+}
+
+.card h3 {
+    color: #ffffff;
+}
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.bee-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #0d1819;
+    min-width: 1000px;
+}
+
+.bee-table th {
+    background-color: #303b3c;
+    padding: 12px 8px;
+    border: 1px solid #465052;
+}
+
+.bee-table td {
+    padding: 12px 8px;
+    border: 1px solid #465052;
+    text-align: center;
+}
+
+.bee-table td img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.bee-row {
+    cursor: pointer;
+}
+
+.bee-row:hover {
+    background-color: #1b2a2b;
+}
+
+.bee-row:focus-visible,
+.field-tab:focus-visible {
+    outline: 2px solid #99ccff;
+    outline-offset: 2px;
+}
+
+.bee-details td {
+    text-align: left;
+    padding: 18px;
+    background-color: #182526;
+}
+
+.field-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.field-tab {
+    background-color: #24334d;
+    color: #ffffff;
+    border: none;
+    padding: 12px 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.field-tab:hover {
+    background-color: #354c6d;
+}
+
+.field-tab.active {
+    background-color: #4da6ff;
+    color: #182336;
+}
+
+.field-content {
+    background-color: #24334d;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.field-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.field-stats {
+    background-color: #172526;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.field-stats h2 {
+    margin: 0;
+    padding: 15px;
+    background-color: #354c6d;
+}
+
+.field-stats img {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: auto;
+}
+
+.field-stats h4 {
+    margin: 0;
+    padding: 10px;
+    background-color: #354c6d;
+}
+
+.field-stats p {
+    padding: 5px;
+}
+
+@media (max-width: 650px) {
+    main {
+        padding: 14px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .home-cards,
+    .field-layout {
+        grid-template-columns: 1fr;
+    }
+}
+/* Bee rarity tabs container */
+.bee-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* Individual tabs */
+.bee-tab {
+    background-color: #24334d;
+    color: white;
+    border: 1px solid #34445f;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Round the outside corners */
+.bee-tab:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.bee-tab:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+/* Hover effect */
+.bee-tab:hover {
+    background-color: #344b70;
+}
+
+/* Common — bronze */
+/* Common — bronze */
+.bee-tab[data-rarity="common"].active {
+    background-color: #CD7F32;
+    color: #101827;
+    border-color: #CD7F32;
+}
+
+/* Rare — white */
+.bee-tab[data-rarity="rare"].active {
+    background-color: #F2F2F2;
+    color: #101827;
+    border-color: #F2F2F2;
+}
+
+/* Epic — yellow */
+.bee-tab[data-rarity="epic"].active {
+    background-color: #F2D94E;
+    color: #101827;
+    border-color: #F2D94E;
+}
+
+/* Legendary — light blue */
+.bee-tab[data-rarity="legendary"].active {
+    background-color: #66CCFF;
+    color: #101827;
+    border-color: #66CCFF;
+}
+
+/* Mythic — purple */
+.bee-tab[data-rarity="mythic"].active {
+    background-color: #B36BFF;
+    color: #101827;
+    border-color: #B36BFF;
+}
+
+/* Event — green */
+.bee-tab[data-rarity="event"].active {
+    background-color: #55D68B;
+    color: #101827;
+    border-color: #55D68B;
+}
+/* Basic Bee neon gradient border */
+.basic-bee-card {
+    display: inline-block;
+    padding: 8px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+
+    background:
+        linear-gradient(#182336, #182336) padding-box,
+        linear-gradient(
+            135deg,
+            #ff9900,
+            #fff176,
+            #ffcc00,
+            #ff7700,
+            #fff176
+        ) border-box;
+
+    box-shadow:
+        0 0 6px #ff990088,
+        0 0 14px #ffcc0055;
+
+    transition: box-shadow 0.2s ease;
+}
+
+/* Brighter glow on hover */
+.basic-bee-card:hover {
+    box-shadow:
+        0 0 8px #ff9900,
+        0 0 20px #ffcc00aa;
+}
+/* Base neon frame for bee cards */
+.bee-card {
+    display: inline-block;
+    padding: 8px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background:
+        linear-gradient(#182336, #182336) padding-box,
+        linear-gradient(135deg, var(--glow1), var(--glow2), var(--glow1)) border-box;
+    box-shadow: 0 0 8px var(--glow-shadow);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.bee-card:hover {
+    box-shadow: 0 0 16px var(--glow-shadow);
+    transform: translateY(-2px);
+}
+
+/* Colors by rarity */
+.bee-card.common {
+    --glow1: #CD7F32;
+    --glow2: #FFF0A0;
+    --glow-shadow: #FFAA00;
+}
+
+.bee-card.rare {
+    --glow1: #FFFFFF;
+    --glow2: #A8C8FF;
+    --glow-shadow: #FFFFFF;
+}
+
+.bee-card.epic {
+    --glow1: #FFD83D;
+    --glow2: #FFF4A3;
+    --glow-shadow: #FFD83D;
+}
+
+.bee-card.legendary {
+    --glow1: #45CFFF;
+    --glow2: #B6F1FF;
+    --glow-shadow: #45CFFF;
+}
+
+.bee-card.mythic {
+    --glow1: #A855F7;
+    --glow2: #F0ABFC;
+    --glow-shadow: #A855F7;
+}
+
+.bee-card.event {
+    --glow1: #38E879;
+    --glow2: #C0FF75;
+    --glow-shadow: #38E879;
+}
